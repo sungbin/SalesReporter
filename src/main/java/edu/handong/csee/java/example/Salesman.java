@@ -1,6 +1,6 @@
 package edu.handong.csee.java.example;
 
-public class Salesman {
+public class Salesman implements Comparable<Salesman> {
 	private String name;
 	private double sales;
 	
@@ -18,5 +18,11 @@ public class Salesman {
 	
 	public void setSales(double sales) {
 		this.sales = sales;
+	}
+
+	@Override
+	public int compareTo(Salesman anotherSalesman) {
+		
+		return name.compareTo(anotherSalesman.name);
 	}
 }
