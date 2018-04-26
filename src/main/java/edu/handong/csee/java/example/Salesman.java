@@ -23,6 +23,11 @@ public class Salesman implements Comparable<Salesman> {
 	@Override
 	public int compareTo(Salesman anotherSalesman) {
 		
-		return name.compareTo(anotherSalesman.name);
+		if(this.sales >anotherSalesman.sales)
+			return 1;
+		else if(this.sales< anotherSalesman.sales)
+			return -1;
+		else
+			return 0;
 	}
 }
